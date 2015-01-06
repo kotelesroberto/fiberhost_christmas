@@ -1,0 +1,122 @@
+body{
+margin:0;
+padding:0;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+a:link img, a:visited img { border: 0px; }
+a:hover img { border: 0px none;}
+a:link, a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+
+
+div.mainwrapper{
+	width:760px;
+	height:692px;
+	position:relative;
+	margin: 0 auto;
+	padding:0px 0px 0px 0px;	
+	background: #fff url(../images/bg.png) left top no-repeat;
+	height:692px;
+	position:relative;
+}
+
+
+div.mainwrapper .area_start{
+}
+
+div.mainwrapper .please_like{ width:703px; height:435px; background:url(../images/bg_please_like.png) left top no-repeat; position: absolute; left:70px; top:0px; display:block; z-index:300;}
+div.mainwrapper .please_like .panel_like { width: 200px; height: 30px; margin: 0 auto; overflow: hidden; position:absolute; left:300px; top:200px; z-index:800; }
+
+
+div.mainwrapper .first_game{ width:703px; height:435px; background:url(../images/bg_first_game.png) left top no-repeat; position: absolute; left:70px; top:0px; display:block; z-index:300;}
+div.mainwrapper .first_game .start_button{ position:absolute; left:370px; top:160px; width:132px; height:108px; background:url(../images/button_start.png) 0px 0px no-repeat; cursor:pointer; }
+div.mainwrapper .first_game .start_button:hover{ background:url(../images/button_start.png) 0px -108px no-repeat; }
+
+/*BEGIN PLAY THE GAME*/
+div.mainwrapper .new_game{ width:703px; height:435px; background:url(../images/bg_start_game.png) left top no-repeat; position: absolute; left:70px; top:0px; display:none; z-index:300;}
+div.mainwrapper .new_game .start_button{ position:absolute; left:370px; top:150px; width:132px; height:108px; background:url(../images/button_start.png) 0px 0px no-repeat; cursor:pointer; }
+div.mainwrapper .new_game .start_button:hover{ background:url(../images/button_start.png) 0px -108px no-repeat; }
+
+/*RESTART GAME*/
+div.mainwrapper .restart_game{ width:703px; height:435px; background:url(../images/bg_restart_game.png) left top no-repeat; position: absolute; left:70px; top:0px; display:none; z-index:300;}
+div.mainwrapper .restart_game .end_total_points{ position:absolute; left:490px; top:110px; width:100px; height:60px; color: #88a800; font-size: 40px; font-weight: bold; text-align:right;  }
+div.mainwrapper .restart_game .start_button{ position:absolute; left:380px; top:130px; width:132px; height:108px; background:url(../images/button_start.png) 0px 0px no-repeat; cursor:pointer; }
+div.mainwrapper .restart_game .start_button:hover{ background:url(../images/button_start.png) 0px -108px no-repeat; }
+
+div.mainwrapper .restart_game .icon_friends{ position:absolute; left:70px; top:190px; width:215px; height:26px; background:url(../images/be_proud.png) 0px 0px no-repeat; cursor:pointer; }
+div.mainwrapper .restart_game .icon_friends:hover{ background:url(../images/be_proud.png) 0px -26px no-repeat; }
+
+div.mainwrapper .restart_game .icon_nominate{ position:absolute; left:80px; top:250px; width:515px; height:30px; background:url(../images/send_to_wall.png) 0px 0px no-repeat; cursor:pointer; }
+div.mainwrapper .restart_game .icon_nominate:hover{ background:url(../images/send_to_wall.png) 0px -30px no-repeat; }
+
+
+
+/*GAME AREA*/
+div.mainwrapper .move_santa_claus{ width:56px; height:84px; position: absolute; left:420px; top:430px; background:url(../images/santa.png) 0px 0px no-repeat; }
+div.mainwrapper .fields_layer{ width:760px; height:267px; position: absolute; left:0px; top:313px; background:url(../images/bg_fields.png) 0px 0px no-repeat; }
+div.mainwrapper .got_bonus{ width:237px; height:66px; position: absolute; left:500px; top:260px; }
+div.mainwrapper .make_undo{ width:30px; height:34px; position: absolute; left:500px; top:200px; background:url(../images/undo_button.png) 0px 0px no-repeat; cursor:pointer;}
+div.mainwrapper .make_undo:hover{ background:url(../images/undo_button.png) 0px -34px no-repeat; }
+div.mainwrapper .game_area{ width:400px; height:470px;  position: absolute; left:35px; top:40px; z-index:100; }
+div.mainwrapper .game_area .christmas_tree{ width:303px; height:440px; position: absolute; left:0px; top:10px; background:url(../images/decoration/tree.png) 0px 0px no-repeat; }
+
+
+div.mainwrapper .area_start .target_count{ width:100px; height:90px; position: absolute; left:610px; top:120px; color:#88a800; font-size:70px; font-weight:normal; text-align:right; line-height:90px;}
+
+div.mainwrapper .area_start #countdown_fields{ width:290px; height:100px; position: absolute; left:470px; top:390px;}
+
+.orange{ color:#ff741b;}
+span.game_item{ position:absolute; cursor: crosshair;}
+
+a:link img.img_inactive{ border:0px; padding:3px; }
+a:link img.img_active{ border: 1px dotted #999999; padding:3px; }
+
+/*ITEMS ON SCROLLBAR*/
+div.sc_menu {
+	/* Set it so we could calculate the offsetLeft */
+	position: absolute;
+	left:30px;
+	top:500px;
+	height: 145px;
+	width: 700px;
+	overflow: auto;
+}
+ul.sc_menu {
+	display: block;
+	height: 110px;
+	/* max width here, for users without javascript */	
+	width: 1500px;	
+	padding: 15px 0 0 15px; 
+	/* removing default styling */
+	margin: 0;	
+	list-style: none;
+}
+.sc_menu li {
+	display: block;
+	float: left;	
+	padding: 0 4px;
+}
+.sc_menu a {
+	display: block;
+	text-decoration: none;
+}
+.sc_menu span {
+	display: none;
+	margin-top: 3px;	
+	text-align: center;
+	font-size: 12px;	
+	color: #88A800;
+}
+.sc_menu a:hover span {
+	display: block;
+}
+.sc_menu img {
+	border: 3px #fff solid;	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.sc_menu a:hover img {
+	filter:alpha(opacity=50);	
+	opacity: 0.5;
+}
